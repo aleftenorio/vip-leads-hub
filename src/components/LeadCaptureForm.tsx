@@ -116,7 +116,7 @@ export function LeadCaptureForm() {
             Processando...
           </>
         ) : (
-          "ACESSAR AGORA"
+          "GARANTIR MEU ACESSO AGORA"
         )}
       </Button>
 
