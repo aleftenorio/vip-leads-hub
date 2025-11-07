@@ -12,36 +12,46 @@ const Index = () => {
       </div>
 
       <main className="relative z-10">
-        {/* Hero Section with Background */}
-        <section 
-          className="min-h-screen py-8 px-4 md:py-16 bg-cover bg-center bg-no-repeat relative"
+        {/* Header with subtle banner */}
+        <header 
+          className="relative py-8 px-4 md:py-12 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${headerBg})` }}
         >
-          {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
+          {/* Subtle overlay */}
+          <div className="absolute inset-0 bg-background/85" />
           
-          <div className="container mx-auto max-w-2xl relative z-10">
+          <div className="container mx-auto max-w-2xl relative z-10 text-center space-y-6">
             {/* Logo */}
-            <div className="flex justify-center mb-12">
+            <div className="flex justify-center">
               <img 
                 src={logo} 
                 alt="Método Imediato - Viviane Moreno" 
                 className="h-16 md:h-20 w-auto animate-scale-in"
               />
             </div>
+            
+            {/* Header tagline */}
+            <h2 className="text-xl md:text-2xl font-medium text-foreground">
+              Você está a um passo de conquistar mais clientes
+            </h2>
+          </div>
+        </header>
 
+        {/* Hero Section */}
+        <section className="py-12 px-4 md:py-16">
+          <div className="container mx-auto max-w-2xl">
             {/* Content */}
             <div className="space-y-8 animate-fade-in text-center">
               <div className="space-y-6">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight text-balance">
-                  VOCÊ ESTÁ A UM PASSO DE{" "}
+                  PREENCHA SEUS DADOS E{" "}
                   <span className="gradient-gold bg-clip-text text-transparent">
-                    AUMENTAR SEU FATURAMENTO
+                    AUMENTE SEU FATURAMENTO
                   </span>
                 </h1>
                 
-                <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                  Preencha os seus dados para acessar o método completo
+                <p className="text-lg md:text-xl text-muted-foreground font-medium">
+                  Acesse o método completo agora
                 </p>
 
                 <div className="flex items-center justify-center gap-3 text-foreground">
@@ -67,6 +77,11 @@ const Index = () => {
           </div>
         </section>
       </main>
+      
+      {/* Footer */}
+      <footer className="py-6 px-4 text-center text-sm text-muted-foreground">
+        <p>© 2024 Método Imediato - Viviane Moreno. Todos os direitos reservados.</p>
+      </footer>
     </div>
   );
 };
